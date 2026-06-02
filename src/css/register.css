@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body.register-body {
+  margin: 0;
+  min-height: 100vh;
+  background: #263238;
+}
+
+.register-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background: white;
+}
+
+.register-left {
+  flex: 1;
+  background: #263238;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  padding: 40px;
+}
+
+.register-logo {
+  font-size: 64px;
+  opacity: 0.9;
+}
+
+.register-tagline {
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.6;
+  opacity: 0.78;
+}
+
+.register-info {
+  max-width: 480px;
+}
+
+.master-explanation {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  opacity: 0.85;
+}
+
+.register-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding: 48px;
+  max-width: 560px;
+}
+
+.register-right h2 {
+  margin: 0;
+  color: #263238;
+  font-size: 28px;
+}
+
+.register-sub {
+  margin: 0 0 16px;
+  color: #7d8a91;
+  font-size: 14px;
+}
+
+.register-right label {
+  color: #455a64;
+  font-size: 14px;
+}
+
+.register-right input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d8dee2;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.register-right input:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+.register-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.register-btn,
+.secondary-btn {
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.register-btn {
+  flex: 1;
+  background: #4caf50;
+  color: white;
+}
+
+.register-btn:hover {
+  background: #43a047;
+}
+
+.secondary-btn {
+  background: #263238;
+  color: white;
+}
+
+.secondary-btn:hover {
+  background: #1c262b;
+}
+
+.register-login {
+  margin-top: 8px;
+  text-align: center;
+  color: #7d8a91;
+  font-size: 13px;
+}
+
+.register-login a {
+  color: #4caf50;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.auth-message {
+  min-height: 20px;
+  font-size: 13px;
+}
+
+.auth-message.error {
+  color: #c62828;
+}
+
+.auth-message.success {
+  color: #2e7d32;
+}
+
+.auth-message.info {
+  color: #1565c0;
+}
+
+@media (max-width: 900px) {
+  .register-left {
+    display: none;
+  }
+
+  .register-right {
+    max-width: none;
+    padding: 32px 24px;
+  }
+
+  .register-actions {
+    flex-direction: column;
+  }
+}

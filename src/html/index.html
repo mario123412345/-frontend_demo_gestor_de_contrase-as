@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DJPJM - Bóveda</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="sidebar-toggle" id="sidebar-toggle">&#9776;</button>
+    <div class="topbar-brand">
+      <h1 class="topbar-title">
+        <span class="titulo-bold">DJPJM</span>
+        <span class="titulo-light">Datos Justos Protegidos Juntos Mantener</span>
+      </h1>
+    </div>
+    <div class="topbar-actions">
+      <span id="session-user" class="session-user"></span>
+      <button id="logout-btn" class="secondary-btn" type="button">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar" id="sidebar">
+      <ul>
+        <li class="active">
+          <i class="fa-solid fa-key"></i>
+          <span class="sidebar-text">Contraseñas</span>
+        </li>
+      </ul>
+    </aside>
+
+    <main class="main">
+      <h1 class="main-title">Mis contraseñas</h1>
+      <p class="main-subtitle">Gestiona tu bóveda cifrada por usuario.</p>
+
+      <div id="vault-message" class="vault-message" aria-live="polite"></div>
+
+      <div class="main-actions">
+        <div class="action-buttons">
+          <button id="add-new-btn" class="primary-btn" type="button">Añadir contraseña</button>
+          <button id="export-btn" class="secondary-btn" type="button">Exportar bóveda</button>
+          <input type="file" id="input-importar" accept=".djpjm" hidden>
+          <button id="import-btn" class="secondary-btn" type="button">Importar bóveda</button>
+        </div>
+      </div>
+
+      <div id="cards-grid"></div>
+    </main>
+  </div>
+
+  <div class="Datos-overlay" id="Datos-overlay">
+    <div class="Datos">
+      <h2 id="modal-title">Nueva contraseña</h2>
+
+      <div class="Datos-contenido">
+        <div class="Datos-formulario">
+          <label for="input-nombre">Nombre del sitio <span class="opcional">(opcional)</span></label>
+          <input type="text" id="input-nombre">
+
+          <label for="input-usuario">Usuario <span class="opcional">(opcional)</span></label>
+          <input type="text" id="input-usuario">
+
+          <label for="input-password">Contraseña <span class="obligatorio">*</span></label>
+          <input type="password" id="input-password">
+
+          <label for="input-confirmar">Confirmar contraseña <span class="obligatorio">*</span></label>
+          <input type="password" id="input-confirmar">
+        </div>
+
+        <div class="Datos-imagen">
+          <label for="input-imagen">Imagen / Logo <span class="opcional">(opcional)</span></label>
+          <div class="upload-area" id="upload-area">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <span>Haz clic o arrastra una imagen</span>
+            <input type="file" id="input-imagen" accept="image/*">
+          </div>
+          <img id="preview-imagen" class="preview-imagen" src="" alt="Preview">
+        </div>
+      </div>
+
+      <div class="ventana-botones">
+        <button id="btn-cancelar" class="btn-cancelar" type="button">Cancelar</button>
+        <button id="btn-guardar" class="btn-guardar" type="button">Guardar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="../js/seguridad.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

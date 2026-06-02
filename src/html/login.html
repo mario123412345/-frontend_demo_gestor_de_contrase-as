@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DJPJM - Login</title>
+  <link rel="stylesheet" href="../css/login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="login-body">
+  <div class="login-wrapper">
+    <div class="login-left">
+      <div class="login-logo">
+        <i class="fa-solid fa-shield-halved"></i>
+      </div>
+      <p class="login-tagline">Tu contraseña maestra,<br>la llave de todo.</p>
+    </div>
+
+    <div class="login-right">
+      <h2>Iniciar sesión</h2>
+      <p class="login-sub">Accede a tu bóveda usando tu usuario y contraseña maestra</p>
+
+      <div id="auth-message" class="auth-message" aria-live="polite"></div>
+
+      <label for="login-usuario">Usuario</label>
+      <input type="text" id="login-usuario" autocomplete="username">
+
+      <label for="login-password">Contraseña maestra</label>
+      <input type="password" id="login-password" autocomplete="current-password">
+
+      <button id="login-btn" class="login-btn" type="button">Entrar</button>
+
+      <p class="login-register">¿No tienes cuenta? <a href="register.html">Regístrate</a></p>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="../js/sha.js"></script>
+  <script src="../js/seguridad.js"></script>
+  <script src="../js/register.js"></script>
+</body>
+</html>

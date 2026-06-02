@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DJPJM - Registro</title>
+  <link rel="stylesheet" href="../css/register.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="register-body">
+  <div class="register-wrapper">
+    <div class="register-left">
+      <div class="register-logo">
+        <i class="fa-solid fa-shield-halved"></i>
+      </div>
+
+      <p class="register-tagline">
+        Tu contraseña maestra,<br>la llave de todo.
+      </p>
+
+      <div class="register-info">
+        <p class="master-explanation">
+          La contraseña maestra protege toda la bóveda. En este prototipo se usa para registrar,
+          abrir sesión y cifrar las entradas de cada usuario.
+        </p>
+      </div>
+    </div>
+
+    <div class="register-right">
+      <h2>Crear cuenta</h2>
+      <p class="register-sub">Registra un usuario y define su contraseña maestra</p>
+
+      <div id="auth-message" class="auth-message" aria-live="polite"></div>
+
+      <label for="reg-usuario">Usuario</label>
+      <input type="text" id="reg-usuario" autocomplete="username">
+
+      <label for="reg-password">Contraseña maestra</label>
+      <input type="password" id="reg-password" autocomplete="new-password">
+
+      <label for="reg-confirmar">Confirmar contraseña maestra</label>
+      <input type="password" id="reg-confirmar" autocomplete="new-password">
+
+      <div class="register-actions">
+        <button id="generate-password-btn" class="secondary-btn" type="button">Generar contraseña</button>
+        <button id="register-btn" class="register-btn" type="button">Crear cuenta</button>
+      </div>
+
+      <p class="register-login">
+        ¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="../js/sha.js"></script>
+  <script src="../js/seguridad.js"></script>
+  <script src="../js/register.js"></script>
+</body>
+</html>
